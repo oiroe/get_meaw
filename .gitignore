@@ -3,3 +3,4 @@ a.out
 *.a
 main.c
 test1
+*.txt
