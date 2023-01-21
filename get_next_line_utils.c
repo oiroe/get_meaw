@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-void	ft_bzero(void *s, size_t count)
+/*void	ft_bzero(void *s, size_t count)
 {
 	char	*str;
 	size_t	i;
@@ -37,9 +37,9 @@ void	ft_bzero(void *s, size_t count)
 		str [i] = '\0';
 		i++;
 	}
-}
+}*/
 
-void	*ft_calloc(size_t count, size_t size)
+/*void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
@@ -48,7 +48,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (0);
 	ft_bzero(ptr, count * size);
 	return (ptr);
-}
+}*/
 
 size_t	ft_strlen(const char *s, int mode)
 {

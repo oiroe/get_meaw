@@ -21,7 +21,7 @@
 	return (temp);
 }*/
 
-char	*trimming_stored(char *stored_next)
+/*char	*trimming_stored(char *stored_next)
 {
 	int		i;
 	int		j;
@@ -44,6 +44,22 @@ char	*trimming_stored(char *stored_next)
 		i++;
 		j++;
 	}
+	free(stored_next);
+	return (str);
+}*/
+
+char	*trimming_stored(char *stored_next)
+{
+	int		len;
+	char	*str;
+
+	len = ft_strlen(stored_next, 1);
+	if (!stored_next[len])
+	{
+		free(stored_next);
+		return (0);
+	}
+	str = ft_strdup(stored_next + len + 1, 0);
 	free(stored_next);
 	return (str);
 }
