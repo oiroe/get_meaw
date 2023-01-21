@@ -6,7 +6,7 @@
 /*   By: pboonpro <pboonpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:22:20 by pboonpro          #+#    #+#             */
-/*   Updated: 2023/01/21 16:26:07 by pboonpro         ###   ########.fr       */
+/*   Updated: 2023/01/21 21:48:35 by pboonpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ char	*get_next_line(int fd)
 	char		*to_return;
 	static char	*stored_next[OPEN_MAX];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
 		return (NULL);
 	stored_next[fd] = reading(fd, stored_next[fd]);
 	if (!stored_next[fd])
