@@ -139,3 +139,8 @@ char	*get_next_line(int fd)
 	stored_next = trimming_stored(stored_next);
 	return (to_return);
 }
+
+/*why has reachable becuase of we didn't reach to the end
+of .txt file, so pointer still keep the line that has been read
+before, when we use get_next_line again the the pointer still
+point to the line we had read before*/

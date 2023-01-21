@@ -66,7 +66,7 @@ size_t	ft_strlen(const char *s, int mode)
 	return (i);
 }
 
-char	*ft_strjoin(char *old, char *to_join)
+char	*ft_strjoin(char *old, char *join)
 {
 	char	*newstr;
 	size_t	i;
@@ -77,16 +77,17 @@ char	*ft_strjoin(char *old, char *to_join)
 		old = malloc(1 * sizeof(char));
 		old[0] = '\0';
 	}
-	newstr = malloc((ft_strlen(old, 0) + ft_strlen(to_join, 0) + 1) * sizeof(char));
-	if (!newstr || !to_join)
+	newstr = malloc((ft_strlen(old, 0)
+				+ ft_strlen(join, 0) + 1) * sizeof(char));
+	if (!newstr || !join)
 		return (0);
 	i = -1;
 	if (old)
 		while (old[++i])
 			newstr[i] = old[i];
 	j = 0;
-	while (to_join[j])
-		newstr[i++] = to_join[j++];
+	while (join[j])
+		newstr[i++] = join[j++];
 	newstr[i] = '\0';
 	free(old);
 	return (newstr);
